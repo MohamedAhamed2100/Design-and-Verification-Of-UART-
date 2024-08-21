@@ -13,7 +13,7 @@ reg [2:0] sample ; // oversampling = 3 samples for one bit
 
 
 /********************** sampling position ************************/
-wire [4:0] middle_edge,before_middle_edge,after_middle_edge;  // 5 bit to take prescale equal 32  
+wire [5:0] middle_edge,before_middle_edge,after_middle_edge;  // 6 bit to take prescale equal 32  
 
 assign middle_edge = (prescale >> 1) - 1'b1     ;  // (prescale/2)-1 -- EX: ((prescale=16)/2)-1= 7
 assign before_middle_edge =  middle_edge - 1'b1 ;
