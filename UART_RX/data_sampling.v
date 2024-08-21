@@ -1,7 +1,7 @@
 module data_sampling (
-     input wire           RST ; // reset signal
-	 input wire           CLK ; // clock signal
-	 input wire      prescale ; // prescale value (scaling for RX clock)
+     input wire               RST ; // reset signal
+     input wire           CLK ; // clock signal
+     input wire [5:0]     prescale ; // prescale value (scaling for RX clock)
      input wire         RX_IN ; // UART RX serial input  
 	 input wire  data_samp_en ; // data sample enable 
 	 input wire      edge_cnt ; // edge counter 
