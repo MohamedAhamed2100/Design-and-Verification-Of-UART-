@@ -1,7 +1,7 @@
 # Universal Asynchronous Reciever and  Transimeter (UART) Using Verilog
 
 # UART TX 
-### RTL VIEWER (QUATUS)
+### RTL VIEWER (QUARTUS)
 ![Capture](https://github.com/user-attachments/assets/52b82faf-8042-4021-87c5-dcc4a764db90)
 ![Capture01](https://github.com/user-attachments/assets/db4610b1-946b-4c15-bded-5a236ca2ec24)
 ![Capture02](https://github.com/user-attachments/assets/4f2dd526-b504-4209-a627-572f660e9a21)
@@ -11,4 +11,4 @@
 ![Capture06](https://github.com/user-attachments/assets/2c3a618a-9f71-42b7-9a90-90b01adcdd42)
 
 # UART RX
-### RTL VIEWER (QUATUS)
+### RTL VIEWER (QUARTUS)
