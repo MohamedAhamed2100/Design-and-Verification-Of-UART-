@@ -79,11 +79,11 @@ task check_tx_output ;
          if(ifc.par_en)	
          begin 
 		     if (!ifc.par_type)
-			     parity_bit = ^ifc.p_data;
+			     parity_bit = ~^ifc.p_data;
 			 else if (!ifc.par_type && ifc.p_data == 8'b0000_0000)
-			     parity_bit = ^ifc.p_data;
+			     parity_bit = ~^ifc.p_data;
 			 else
-                 parity_bit = ~(^ifc.p_data); 			 
+                 parity_bit = ^ifc.p_data; 			 
          end
          
 	 // comparsion step  
@@ -98,11 +98,13 @@ task check_tx_output ;
 		         begin
 		             $display("Parallel_data : %b ,, Parity_enable : %b ,, Parity_type : %b " ,ifc.p_data,ifc.par_en,ifc.par_type);
 			         $display("Test case is succeeded ,, generated_pattern = %b ,, expexted_pattern = %b" ,generated_pattern_par,expected_pattern_par);
+					 $display("");
 			     end
 	             else
 		         begin 
 		             $display("Parallel_data : %b ,, Parity_enable : %b ,, Parity_type : %b " ,ifc.p_data,ifc.par_en,ifc.par_type);
 			         $display("Test case is failed ,, generated_pattern = %b ,, expexted_pattern = %b" ,generated_pattern_par,expected_pattern_par);
+					 $display("");
 			     end 
 			 end
 		 else 
@@ -111,11 +113,13 @@ task check_tx_output ;
 		         begin
 		             $display("Parallel_data : %b ,, Parity_enable : %b ,, Parity_type : %b " ,ifc.p_data,ifc.par_en,ifc.par_type);
 			         $display("Test case is succeeded ,, generated_pattern = %b ,, expexted_pattern = %b" ,generated_pattern,expected_pattern);
+					 $display("");
 			     end
 	             else
 		         begin 
 		             $display("Parallel_data : %b ,, Parity_enable : %b ,, Parity_type : %b " ,ifc.p_data,ifc.par_en,ifc.par_type);
 			         $display("Test case is failed ,, generated_pattern = %b ,, expexted_pattern = %b" ,generated_pattern,expected_pattern);
+					 $display("");
 			     end 
 			 end  
 	 end 
