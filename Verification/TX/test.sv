@@ -94,7 +94,7 @@ task check_tx_output ;
 			 
 		 if(ifc.par_en)
 			 begin	 
-		         if(generated_pattern_par == expected_pattern_par)
+		         assert(generated_pattern_par == expected_pattern_par)
 		         begin
 		             $display("Parallel_data : %b ,, Parity_enable : %b ,, Parity_type : %b " ,ifc.p_data,ifc.par_en,ifc.par_type);
 			         $display("Test case is succeeded ,, generated_pattern = %b ,, expexted_pattern = %b" ,generated_pattern_par,expected_pattern_par);
@@ -109,7 +109,7 @@ task check_tx_output ;
 			 end
 		 else 
 		     begin
-			     if(generated_pattern == expected_pattern)
+			     assert(generated_pattern == expected_pattern)
 		         begin
 		             $display("Parallel_data : %b ,, Parity_enable : %b ,, Parity_type : %b " ,ifc.p_data,ifc.par_en,ifc.par_type);
 			         $display("Test case is succeeded ,, generated_pattern = %b ,, expexted_pattern = %b" ,generated_pattern,expected_pattern);
