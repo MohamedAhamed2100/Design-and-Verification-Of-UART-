@@ -31,8 +31,8 @@ begin
          if (PAR_EN)
 	     begin
 	         case(PAR_TYP)
-	             1'b0 : Par_Bit <= ^PAR_P_Data  ;   // Even Parity Bit
-	             1'b1 : Par_Bit <= ~(^PAR_P_Data) ; // Odd Parity Bit 	
+	             1'b0 : Par_Bit <= ~^PAR_P_Data  ;   // Even Parity Bit
+	             1'b1 : Par_Bit <= (^PAR_P_Data) ; // Odd Parity Bit 	
 	         endcase       	 
 	     end
      end
