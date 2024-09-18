@@ -98,9 +98,9 @@ task check_TX_output ;
          if(parity_enable_TB)	
          begin 
 		     if (!parity_type_TB)
-			     parity_bit = ^P_DATA_TB;
+			     parity_bit = ~^P_DATA_TB;
 			 else
-                 parity_bit = ~(^P_DATA_TB); 			 
+                 parity_bit = (^P_DATA_TB); 			 
          end
 
          
